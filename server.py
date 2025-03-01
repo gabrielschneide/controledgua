@@ -1,5 +1,8 @@
 import os
 import subprocess
+from flask import Flask, render_template, request
+import PyPDF2
+import requests
 
 # Instala dependências automaticamente
 try:
@@ -13,8 +16,6 @@ except ImportError:
     import PyPDF2
     import requests
 
-from flask import Flask, render_template, request
-
 app = Flask(__name__)
 
 UPLOAD_FOLDER = "uploads"
@@ -24,9 +25,9 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 # Chave API fornecida
 API_KEY = "AIzaSyBzwbCvx_LMKbGu3OiVmJzveXmW25Hfuk0"
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+@app.route('/')
+def home():
+    return "API rodando localmente!"
 
 @app.route("/upload", methods=["POST"])
 def upload():
