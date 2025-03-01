@@ -1,29 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado da Análise</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            color: #0056b3;
-        }
-        p {
-            text-align: justify;
-            max-width: 800px;
-            margin: auto;
-        }
-    </style>
+    <title>Upload de PDF</title>
 </head>
 <body>
-    <h1>Resultado da Análise</h1>
-    <p>{{ texto }}</p>
-    <br>
-    <a href="/">Voltar</a>
+    <h1>Enviar Arquivo PDF</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="application/pdf" required>
+        <button type="submit">Enviar PDF</button>
+    </form>
 </body>
 </html>
