@@ -14,7 +14,7 @@ except ModuleNotFoundError:
 
 # 🚀 Função para analisar currículo via API Gemini
 def analyze_resume_with_gemini(resume_text, job_description):
-    api_key = "SUA_CHAVE_API_AQUI"  # Substitua pela sua chave válida
+    api_key = "AIzaSyBzwbCvx_LMKbGu3OiVmJzveXmW25Hfuk0"  # Substitua pela sua chave válida
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
 
     data = {
